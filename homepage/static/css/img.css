@@ -1,0 +1,9 @@
+img[alt='pic2']{
+    height: 200px;
+    width: 300px;
+}
+
+input[type='password']{
+    color: red;
+    width: 300px;
+}

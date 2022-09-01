@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/baabtra.css' %}">
+</head>
+<body class="body">
+    <table>
+        <tr class="tr1">
+            <td>
+                <div class="head1">
+                <img src="{% static 'img/face1.png' %}">
+                <img src="{% static 'img/twtpng.png' %}">
+                <img src="{% static 'img/insta.png' %}">
+                <img src="{% static 'img/linki.png' %}">
+                </div>
+            </td>
+            <td class="td1">
+                Contact Us : 8476785760
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="{% static 'img/logo.png' %}">
+            </td>
+            <td>
+                <div class="head2">
+                <a href="">INTERNSHIP</a>
+                <a href="">PLACEMENT</a>
+                <a href="">ABOUTUS</a>
+                <a href="">BLOG</a>
+                <a href="">LOGIN</a>
+                <input type="button" value="ENQUIRE NOW">
+                </div>
+            </td>
+        </div>
+        </tr>
+    </table>
+    {% block content %}
+    <table class="contab1">
+        <tr>
+            <td>
+                <img src="{% static 'img/oray.jpg' %}"><br>
+                <h4>We are affiliated with oray education London, UK.</h4>
+            </td>
+        </tr>
+        <tr >
+            <td>
+                <table class="tab2" align="center">
+                    <tr>
+                        <td>
+                            <h4>GETTING A SOFTWARE JOB IS SO EASY WITH OUR INTERNSHIP PROGRAM</h4>
+                            <p>Learn programming from the most trusted software training company in Calicut with highest placement record. Enroll for software courses and internship programs in Python,PHP, Angular or flutter to start your career.                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="contimg">
+    <table>
+        <tr>
+            <td>
+                <img src="{% static 'img/python.webp' %}"><a href="">Python Training</a>
+            </td>
+            <td>
+                <img src="{% static 'img/php.webp' %}"><a href="">PHP Training</a>
+            </td>
+            <td>
+                <img src="{% static 'img/angular.webp' %}"><a href="">Angular Training</a>
+            </td>
+            <td>
+                <img src="{% static 'img/flutter.webp' %}"><a href="">Flutter Training</a>
+            </td>
+            <td>
+                <img src="{% static 'img/javascript.webp' %}"><a href="">Javascript Training</a>
+            </td>
+        </tr>
+    </table>
+    </div>
+<div class="cont1">
+    <h1>Explore Our internship programme</h1>
+    <p>baabtra.com offers you courses and training programs that will enable you to master programming in depth. Enroll and start learning with the experts in the industry. We offer PHP Training with Laravel Framework, Python Training with Django Framework, Angular Training and Node.js Training.</p>
+</div>
+<div class="contspec">
+    <table>
+        <tr>
+            <td colspan="2">
+                <h1 class="body">OUR SPECIALITIES</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="csbg">
+                <h4>CS Talent Show</h4>
+                <p>CS talent show, a live event hosted by the student through his/her Facebook or Instagram or youtube channel to showcase the project done by students. This event is apart of their course where the student learns how to explain the project to the out side world. Our instructors will monitor the students’ projects and provide guidance</p>
+                </div>
+            </td>
+            <td>
+                <div class="hrbg">
+                <h4>Coffee With HR</h4>
+                <p>Baabtra has launched a new initiative to connect students with IT companies (Resources to Employers). MNC HR representatives will visit Baabtra students to present their company, job opportunities, And job nature. Students will learn about the companies and have the opportunity to apply for jobs</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="festbg">
+                <h4>Digital Fest</h4>
+                <p>Digital fest for baabtra students is a platform for students to showcase their software application development skills to the companies for securing a job.</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+    {% endblock %}
+   <table class="foottable">
+    <tr>
+        <td rowspan="2" class="foottd1">
+            <img src="{% static 'img/logo.png' %}"><br>
+            <b>Partner with</b><br>
+            <img src="{% static 'img/images.png' %}"><br>
+            A divition of Baabte System Tecnologies Pvt Ltd 
+        </td>
+        <td class="foot">COURSES</td>
+        <td class="foot">SITE MAP</td>
+        <td class="foot">ADDRESS</td>
+    </tr>
+    <tr>
+        <td class="foot">
+            Python<br>
+            PHP<br>
+            Angular<br>
+            Flutter
+        </td>
+        <td class="foot">
+            Home
+            Placements<br>
+            About<br>
+            Blog<br>
+            Contact<br>
+            Career
+        </td>
+        <td class="foot">
+            CAFIT Square, 5th Floor,<br>
+            HiLite Business Park,<br>
+            Thondayad Bye-Pass,<br>
+            Hilite City, Calicut, Kerala, India.<br>
+            +91 859 205 8444,
+
+            0495 2436990<br>
+
+            info@baabtra.com
+        </td>
+    </tr>
+   </table> 
+</body>
+</html>

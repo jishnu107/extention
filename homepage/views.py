@@ -13,3 +13,12 @@ def about_page(request):
 
 def contact_page(request):
     return render(request,'homepage/contact.html')
+
+def cart_page(request):
+    return render(request,'homepage/cart.html')
+
+def image_page(request):
+    return render(request,'homepage/image.html')
+
+def baabtra_page(request):
+    return render(request,'homepage/baabtra.html')

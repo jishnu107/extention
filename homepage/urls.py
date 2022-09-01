@@ -6,5 +6,8 @@ urlpatterns = [
     path('home',views.home_page,name='home'),
     path('about',views.about_page,name='about'),
     path('contact',views.contact_page,name='contact'),
+    path('cart',views.cart_page,name='cart'),
+    path('image',views.image_page,name='image'),
+    path('baabtra',views.baabtra_page,name='baabtra'),
     
 ]
