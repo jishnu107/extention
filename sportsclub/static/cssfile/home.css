@@ -1,0 +1,83 @@
+.head1{
+    border: 3px red solid;
+    background-color: red;
+    color: azure;
+    margin: auto;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+}
+
+.img img{
+    width: 50px;
+}
+
+.rhead{
+    margin-right: 100px;
+    text-align: right;
+}
+
+.grid1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    justify-content: center;
+    gap: 5px;
+}
+.grid1 img{
+    width: 300px;
+}
+
+.hd2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+ .contact{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 800px;
+    justify-content: center;
+ }
+
+ .contact div{
+    text-align: left;
+ }
+
+ .ply{
+    text-align: center;
+    margin-top: 30px;
+ }
+
+ .pg1{
+    display: grid;
+    grid-template-columns: repeat(2,400px);
+    gap: 10px;
+    margin-top: 50px;
+ }
+
+ .players{
+    margin-top: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .pg1 img{
+    width: 400px;
+ }
+
+ .pg2{
+    display: grid;
+    grid-template-columns: repeat(3,500px);
+    row-gap: 15px;
+
+ }
+
+ .pg3{
+    display: grid;
+    grid-template-columns: repeat(3,500px);
+ }
+

@@ -1,0 +1,52 @@
+.d2{
+    grid-area: one;
+}
+
+.d3{
+    grid-area: two;
+}
+ .d4{
+    grid-area: three;
+}
+.d5{
+    grid-area: four;
+}
+ 
+.d6{
+    grid-area: five;
+}
+
+.d7{
+    grid-area: six;
+}
+
+.d1{
+    display:grid;
+    background-color: brown;
+    height: 100vh;
+    border: 3px blue solid;
+    grid-template-areas: 
+        "one two"
+        "three four"
+        "five six"
+        ;
+
+}
+
+.d1 div{
+    background-color: blueviolet;
+    border: 3px greenyellow solid;
+}
+/* 
+button{
+    background-color: blue;
+
+}
+
+button:hover{
+    background-color: brown;
+} */
+/* 
+p::first-line{
+    color: brown;
+} */

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <label for="text">enter item</label>
+    <input type="text" id="txt"><br>
+    <input type="button" value="add" onclick="add()">
+    <ul id="list">
+
+    </ul> -->
+
+    <!-- <script>
+        function add(){
+           item=document.getElementById('txt').value
+           ul=document.getElementById('list')
+           li=document.createElement('li')
+           li.appendChild(document.createTextNode(item))
+           ul.appendChild(li)
+          
+            }
+    </script> -->
+
+
+    <!-- <label for="text">password</label>
+    <input type="password" id="pass">
+    <input type="checkbox" onclick="check()"> -->
+
+    <script>
+
+        // function check(){
+    //         var pass1=document.getElementById('pass')
+    //         if(pass1.type == 'password')
+    //         {
+    //             pass1.type = 'text'
+    //         }
+    //         else{
+    //             pass1.type = 'password'
+    //         }
+                
+    //     }
+
+    // </script>
+  
+      <input type="text" id="p1">
+      <input type="button" value="submit" onclick="strength()">
+      <span id="msg"></span>
+      
+
+     <script>
+        function strength(){
+
+            var pass=document.getElementById('p1').value
+            var msg=document.getElementById('msg') 
+            var special_characters = ['@','#','$','%'] // 123#
+            var sp_found = 0
+            var numb_found = 0
+
+             
+
+        
+            for(var s of special_characters){
+                 
+               if(pass.indexOf(s) > 0){
+                    sp_found = 1
+                    break;
+                    
+                     
+               }
+                
+            }
+            
+                
+            for(var i=0;i<10;i++){
+                if(pass.indexOf(i)> 0){
+                    numb_found = 1
+                    break
+                }
+            }
+
+          if(sp_found == 1 && numb_found ==1){
+           msg.innerHTML = 'Strong Pasword'
+          }  
+          else{
+            msg.innerHTML = 'Weak Pasword'
+
+          }
+          
+        }
+
+    // </script>
+
+
+
+
+</body>
+</html>

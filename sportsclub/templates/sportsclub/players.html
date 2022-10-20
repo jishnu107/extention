@@ -1,0 +1,64 @@
+{% extends 'sportsclub/home.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'cssfile/home.css' %}">
+</head>
+<body>
+    {% block content %}
+    <div class="ply">
+        <h2>FC Barcelona First Team</h2>
+        <a href="#goal">GOALKEEPERS</a>
+        <a href="#def">DEFENDERS</a>
+        <a href="#mid">MIDFILDERS</a>
+        <a href="#for">FORWARDS</a>
+        <a href="#coa">COACHING STAFF</a>
+    </div>
+    <div class="players">
+    <h2 id="goal">GOALKEEPERS</h2>
+    <div class="pg1">
+        <div><img src="{% static 'img/ter.webp' %}"><h3>Marc-André ter Stegen</h3></div>
+        <div><img src="{% static 'img/inaki.webp' %}"><h3>Iñaki Peña</h3></div>
+    </div>
+    <h2 id="def">DEFENDERS</h2>
+    <div class="pg2">
+        <div><img src="{% static 'img/ter.webp' %}"><h3>Marc-André ter Stegen</h3></div>
+        <div><img src="{% static 'img/inaki.webp' %}"><h3>Iñaki Peña</h3></div>
+        <div><img src="{% static 'img/inaki.webp' %}"><h3></h3></div>
+        <div><img src="{% static 'img/inaki.webp' %}"><h3></h3></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+    </div>
+    <h2  id="mid">MIDFILDERS</h2>
+    <div class="pg2">
+        <div><img src="{% static 'img/ter.webp' %}">Marc-André ter Stegen</div>
+        <div><img src="{% static 'img/inaki.webp' %}">Iñaki Peña</div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+    </div>
+    <h2  id="for">FORWARDS</h2>
+    <div class="pg2">
+        <div><img src="{% static 'img/ter.webp' %}">Marc-André ter Stegen</div>
+        <div><img src="{% static 'img/inaki.webp' %}">Iñaki Peña</div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+        <div><img src="{% static 'img/inaki.webp' %}"></div>
+    </div>
+    <h2  id="coa">COACHING STAFF</h2>
+    <div class="pg1">
+        <div class="g1"><img src="{% static 'img/ter.webp' %}">Marc-André ter Stegen</div>
+    </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

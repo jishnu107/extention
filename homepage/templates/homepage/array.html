@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // var num1=Number(prompt('enter a number'))
+    // var found=false
+    // var num=[50,67,5,4,45,10,10]
+    // for(i=0; i<num.length; i++){
+    //     if(num1==num[i]){
+    //         found=true
+    //     }
+
+    // }
+    // if(found==true){
+    //     console.log('element found')
+    // }
+    // else{
+    //     console.log('not found')
+    // }
+
+
+// print dublicate Element
+// largest number in an Array
+// second largest
+// print palindrome numbers
+
+
+// var dub=[2,3,4,33,2,33,3]
+// for(i=0; i<dub.length; i++){
+//     for(j=i+1; j<dub.length; j++){
+//         if(dub[i]==dub[j]){
+//             console.log(dub[j])
+//         }
+//     }
+// }
+
+
+// var arr=[2,3,45,5]
+// var large=0
+// for(i=0; i<arr.length; i++){
+//     if(arr[i]>large){
+//         large=arr[i]
+//     }
+// }
+
+// console.log(large)
+
+// var arr=[2,3,45,5,10,20,60]
+// var large=0
+// var seclarge=0
+// for(i=0; i<arr.length; i++){
+//     if(arr[i]>large){
+//         large=arr[i]
+//     }
+// }
+// for(i=0; i<arr.length; i++){
+//     if(arr[i]==large){
+//         continue;
+//     }
+//     else{
+//         if(arr[i]>seclarge){
+//             seclarge=arr[i]
+//         }
+//     }
+// }
+
+// console.log(seclarge)
+
+// var arr=[11,45,34]
+// var rev=0
+//     for(i=0; i<arr.length; i++){
+//         while (i != 0) {
+//     remainder =  % 10;
+//     rev = rev * 10 + remainder;
+//     arr[i] /= 10;
+//   }
+
+//     }
+//     for(j=0; j>arr.length; j++){
+//         if(arr[i]==rev[j]){
+//             console.log(rev[j])
+//         }
+
+//     }
+
+var rev = 0
+var array1=[121,141,23,45,34,33]
+var temp=0;
+ 
+for(i=0; i<array1.length; i++){
+        temp = array1[i]
+        rev = 0
+        while(temp > 0){
+                r=temp % 10;
+                rev=(rev * 10) + r;
+                temp = parseInt(temp/10)        
+        }
+
+        if(rev ==array1[i] ){
+            console.log(array1[i],' is palindrome')
+        }
+ 
+}
+
+
+// var str=['ravi','ramu','mom','hello']
+// for(i=0; i<str.length; i++){
+//     for (i = 0; i < len/2; i++ ) {
+//         if (str[i] != str[str.length - 1 - i]){
+//             console.log('not palindrom')
+//             break;
+//         }
+//         else{
+//             console.log('palindrom')
+//         }
+//     }
+    
+// }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </script> 
+</body>
+</html>

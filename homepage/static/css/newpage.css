@@ -1,0 +1,12 @@
+p,div{
+    color: brown;
+}
+
+span{
+    color: blueviolet;
+    font-size: larger;
+}
+div span{
+    color:inherit;
+    font-size: inherit;
+}

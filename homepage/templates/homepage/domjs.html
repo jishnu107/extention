@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id='txt1'><br>
+    <span id='alert1'></span><br>
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br>
+    <input type="text" id='txt2'><br>
+    <span id='alert2'></span>
+    <input type="button" value="submit" onclick="add()"><br>
+    <span id="res"></span>
+
+    <script>
+        function add(){
+            var first=Number(document.getElementById('txt1').value)
+            var second=Number(document.getElementById('txt2').value)
+            var operator=document.getElementById('op').value
+            var result=0
+            if(first==''|| second==''){
+                if(first==''){
+                    document.getElementById('alert1').innerHTML='pls fill'
+                }
+                if(second==''){
+                    document.getElementById('alert2').innerHTML='plss fill'
+                }
+            }
+            else{
+                if(operator=='+'){
+            result=first+second
+            }
+            else if(operator=='-'){
+            result=first-second
+            }
+            else if(operator=='*'){
+            result=first*second
+            }
+            else if(operator=='/'){
+            result=first/second
+            }
+        
+            
+            document.getElementById('res').innerHTML=result
+        }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+.d11{
+    grid-column: span 2;
+}
+.d12{
+    grid-column: span 1;
+}
+
+.d13{
+    grid-column: span 1;
+}
+
+.d14{
+    grid-row: span 2;
+}
+
+.d15{
+    grid-row: span 2;
+}
+
+.d16{
+    grid-column: span 1;
+}
+
+.d17{
+    grid-column: span 2;
+}
+
+.d18{
+    grid-column: span 1;
+}
+
+.d19{
+    grid-column: span 1;
+}
+.d20{
+    grid-column: span 2;
+}
+
+.d1{
+    background-color: red;
+    border: 3px blue solid;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    grid-template-rows: repeat(4,1fr); 
+}
+
+.d1 div{
+    background-color: fuchsia;
+    border: 3px royalblue solid;
+}
+
+img{
+    height: 135px;
+    width: 100%;
+}
+
+.im{
+    height: 300px;
+}

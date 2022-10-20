@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'cssfile/home.css' %}">
+</head>
+<body>
+    <div class="head1">
+        <div class="img" >
+        <img src="{% static 'img/FCB.png' %}">FC BARCELONA
+        </div>
+        <div class="rhead">
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'contact' %}">CONTACT US</a>
+            <a href="{% url 'players' %}">PLAYERS</a>
+        </div>
+    </div>
+    {% block content %}
+    <div class="hd2" >
+    <h2>GAMES AND FEATURES</h2>
+    </div>
+    <div class="grid1">
+        <div class="g1"><a href="https://www.fcbarcelona.com/en/football/first-team/news/2790083/gavi-renews-contract-with-fc-barcelona-until-2026/featured"><img src="{% static 'img/gavi.webp' %}" alt=""></a>
+        <p>GAVI 2026
+            Gavi renews contract until 2026
+            The event for Gavi's new contract extension will take place on Thursday 15 September at 6pm CEST at Spotify Camp Nou</p>
+    </div>
+        <div class="g2"><a href="https://www.fcbarcelona.com/en/football/womens-football/news/2757617/alexia-putellas-continues-to-dominate-european-football/featured"><img src="{% static 'img/UEFA.webp' %}" alt=""></a>
+        <P>UEFA Champions League 202223 Group Stage Draw
+            Alexia Putellas continues to dominate European football
+            The great trajectory of Barça Women and the captain's fine form help to make her the first player to ever win the UEFA Women Player of the Year</P>
+        </div>
+        <div class="g3"><a href="https://www.fcbarcelona.com/en/football/first-team/news/2744943/fc-barcelona-leads-in-golden-boy-2022-candidates/featured"><img src="{% static 'img/Pedri.webp' %}" alt=""></a>
+        <P>Pedri Gavi
+            FC Barcelona leads in Golden Boy 2022 candidates
+            Pedri, Ansu Fati, Gavi, Balde and the loaned out Nico González are all in line to be named the best player aged under 21
+        </P></div>
+    </div>
+
+
+    {% endblock %}
+
+    
+</body>
+</html>
