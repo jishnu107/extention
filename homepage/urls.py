@@ -26,6 +26,10 @@ urlpatterns = [
     path('domwk',views.domwk_page,name='domwk'),
     path('jswk',views.jswk_page,name='jswk'),
     path('jswk2',views.jswk2_page,name='jswk2'),
+    path('todo',views.todo_page,name='todo'),
+    path('domnew',views.domnew_page,name='domnew'),
+
+
 
 
 

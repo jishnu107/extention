@@ -71,6 +71,11 @@ def jswk_page(request):
     return render(request,'homepage/jswk.html')
 def jswk2_page(request):
     return render(request,'homepage/jswk2.html')
+def todo_page(request):
+    return render(request,'homepage/todo.html')
+def domnew_page(request):
+    return render(request,'homepage/domnew.html')
+
 
 
 

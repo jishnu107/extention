@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    product name<input type="text" id="proname"><br>
+    product discription<input type="text" id="dis"><br>
+    product price<input type="text" id="proprice"><br>
+    <input type="button" value="add" onclick="add()"><br>
+    <table id="tb1" border="1">
+        <th>product name</th>
+        <th>product discription</th>
+        <th>price</th>
+        <th>status</th>
+        <th>action</th>
+        
+
+
+
+    </table>
+
+    <script>
+        function add(){
+            var name1=document.getElementById('proname').value
+            var prodis=document.getElementById('dis').value
+            var price=document.getElementById('proprice').value
+
+
+            var tr=document.createElement('tr')
+
+            var td1=tr.appendChild(document.createElement('td'))
+            var td2=tr.appendChild(document.createElement('td'))
+            var td3=tr.appendChild(document.createElement('td'))
+            var td4=tr.appendChild(document.createElement('td'))
+            var td5=tr.appendChild(document.createElement('td'))
+
+
+
+
+            td1.innerHTML=name1
+            td2.innerHTML=prodis
+            td3.innerHTML=price
+            td4.innerHTML='<span id="penaction" style="color: red;">PENDING</span>'
+            td5.innerHTML='<input type="button" value="COMPLETE" onclick="btnaction()" >'
+            document.getElementById('tb1').appendChild(tr)
+        }
+
+        function btnaction(){
+           pen1=document.getElementById('penaction')
+            pen1.innerHTML='completed'
+            pen1.style.color='green'
+
+
+
+        }
+    </script>
+
+</body>
+</html>

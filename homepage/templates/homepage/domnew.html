@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <td>
+                name
+            </td>
+            <td>
+                <input type="text" id="name">
+                <span id="name_error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                age
+            </td>
+            <td>
+                <input type="number" id="age">
+                <span id="age_error"></span>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                gender
+            </td>
+            <td>
+            <input type="radio" value="male" name="gender" id="genmale">male
+            <input type="radio" value="female" name="gender" id="genfemale">female
+            <span id="gen_error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                phone
+            </td>
+            <td>
+                <input type="text" id="phone">
+                <span id="phnu_error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                email:
+            </td>
+            <td>
+                <input type="text" id="mail">
+                <span  id="email_error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                username:
+            </td>
+            <td>
+                <input type="text" id="username">
+                <span id="un_error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                password:
+            </td>
+            <td>
+                <input type="password" id="password">
+                <span id="up_error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="submit" onclick="return validate()"></td>
+        </tr>
+           
+        
+    </table>
+    </form>
+
+    <script>
+       function validate(){
+
+        var first_name=document.getElementById('name')
+        var age_1=document.getElementById('age')
+        var phone_number=document.getElementById('phone')
+        var email=document.getElementById('mail')
+        var user_name=document.getElementById('username')
+        var user_password=document.getElementById('password')
+        var male=document.getElementById('genmale')
+        var female=document.getElementById('genfemale')
+
+        
+
+        var name1_error=document.getElementById('name_error')
+        var age1_error=document.getElementById('age_error')
+        var phnum_error=document.getElementById('phnu_error')
+        var mail_error=document.getElementById('email_error')
+        var username_error=document.getElementById('un_error')
+        var userpass_error=document.getElementById('up_error')
+        var gender_error=document.getElementById('gen_error')
+        var nameRegex = /^[a-zA-Z\-]+$/;
+
+        if(first_name.value==''){
+            name1_error.innerHTML='please enter name'
+            name1_error.style.color='red'
+            first_name.style.border='1px solid red'
+        }
+        else{
+            if(nameRegex.test(first_name.value)==false){
+                name1_error.innerHTML='name should contain alphabets'
+            }
+        }
+        if(age_1.value==''){
+            age1_error.innerHTML='please enter age'
+            age1_error.style.color='red'
+            age_1.style.border='1px solid red'
+        }
+        if(phone_number.value==''){
+            phnu_error.innerHTML='please enter phone number'
+            phnu_error.style.color='red'
+            phone_number.style.border='1px solid red'
+        }
+        if(email.value==''){
+            mail_error.innerHTML='please enter email'
+            mail_error.style.color='red'
+            email.style.border='1px solid red'
+        }
+        if(user_name.value==''){
+            username_error.innerHTML='please enter username'
+            username_error.style.color='red'
+            user_name.style.border='1px solid red'
+        }
+        if(user_password.value==''){
+            userpass_error.innerHTML='please enter password'
+            userpass_error.style.color='red'
+            user_password.style.border='1px solid red'
+        }
+        if(male.checked==false && female.checked==false){
+            gender_error.innerHTML='please select gender'
+            gender_error.style.color='red'
+        }
+        if(user_password.value.length<8){
+            userpass_error.innerHTML="password must be atleast 8 characters"
+
+        }
+
+       }
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
