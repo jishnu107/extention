@@ -5,54 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-    product name<input type="text" id="proname"><br>
-    product discription<input type="text" id="dis"><br>
-    product price<input type="text" id="proprice"><br>
-    <input type="button" value="add" onclick="add()"><br>
-    <table id="tb1" border="1">
-        <th>product name</th>
-        <th>product discription</th>
-        <th>price</th>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">TASK</label>
+        <input type="email" class="form-control w-50" id="task" placeholder="ENTER TASK">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">TASK DESCRIPTION</label>
+        <textarea class="form-control w-50" id="description" rows="3"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="add()">ADD</button><br><br>
+    <table id="todo_tb" class="table table-striped w-50">
+        <tr>
+        <th>s/no</th>
+        <th>Task</th>
+        <th>Task description</th>
+        <th>date</th>
         <th>status</th>
         <th>action</th>
-        
-
-
+        </tr>
+    
 
     </table>
 
     <script>
+        var s_no = 1
         function add(){
-            var name1=document.getElementById('proname').value
-            var prodis=document.getElementById('dis').value
-            var price=document.getElementById('proprice').value
+            var task = document.getElementById('task').value
+            var description = document.getElementById('description').value
+            var dt = new Date() // current date and time
+            var current_date = dt.getDate() + '/' + dt.getMonth() + '/' + dt.getFullYear() // dd/mm/yyyy formate
+
+            var todo_tb = document.getElementById('todo_tb')
+            var new_tr = document.createElement('tr')  // creating new row
+
+            // creating new table cells inside newly created tr
+            var td_snum = new_tr.appendChild(document.createElement('td')) 
+            var td_task = new_tr.appendChild(document.createElement('td'))
+            var td_des = new_tr.appendChild(document.createElement('td'))
+            var td_date = new_tr.appendChild(document.createElement('td'))
+            var td_status = new_tr.appendChild(document.createElement('td'))
+            var td_action = new_tr.appendChild(document.createElement('td'))
+
+           // increment snum,then append to 1st td
+            td_snum.innerHTML = s_no++ 
+            todo_tb.appendChild(new_tr) 
+
+            td_task.innerHTML = task
+            td_des.innerHTML = description
+            td_date.innerHTML = current_date
+            td_status.innerHTML = 'PENDING'
+            
+            
 
 
-            var tr=document.createElement('tr')
-
-            var td1=tr.appendChild(document.createElement('td'))
-            var td2=tr.appendChild(document.createElement('td'))
-            var td3=tr.appendChild(document.createElement('td'))
-            var td4=tr.appendChild(document.createElement('td'))
-            var td5=tr.appendChild(document.createElement('td'))
-
-
-
-
-            td1.innerHTML=name1
-            td2.innerHTML=prodis
-            td3.innerHTML=price
-            td4.innerHTML='<span id="penaction" style="color: red;">PENDING</span>'
-            td5.innerHTML='<input type="button" value="COMPLETE" onclick="btnaction()" >'
-            document.getElementById('tb1').appendChild(tr)
-        }
-
-        function btnaction(){
-           pen1=document.getElementById('penaction')
-            pen1.innerHTML='completed'
-            pen1.style.color='green'
 
 
 

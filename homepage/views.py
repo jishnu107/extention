@@ -75,6 +75,8 @@ def todo_page(request):
     return render(request,'homepage/todo.html')
 def domnew_page(request):
     return render(request,'homepage/domnew.html')
+def domnew1_page(request):
+    return render(request,'homepage/domnew1.html')
 
 
 
