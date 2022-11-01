@@ -20,6 +20,7 @@
         <label for="exampleFormControlTextarea1" class="form-label">TASK DESCRIPTION</label>
         <textarea class="form-control w-50" id="description" rows="3"></textarea>
     </div>
+    <span id="alert"></span><br>
     <button type="button" class="btn btn-primary" onclick="add()">ADD</button><br><br>
     <table id="todo_tb" class="table table-striped-columns w-50">
         <tr>
@@ -36,10 +37,17 @@
         var s_no = 1
         var row_no = 0
         function add() {
-            var task = document.getElementById('task').value
-            var description = document.getElementById('description').value
-            var dt = new Date() // current date and time
+            
+            var task = document.getElementById('task')
+            var description = document.getElementById('description')
+
+            if(task.value == '' || description.value == ''){
+                document.getElementById('alert').innerHTML='pls fill'
+            }
+            else{
+                var dt = new Date() // current date and time
             var current_date = dt.getDate() + '/' + dt.getMonth() + '/' + dt.getFullYear() // dd/mm/yyyy formate
+
 
             var todo_tb = document.getElementById('todo_tb')
             var new_tr = document.createElement('tr')  // creating new row
@@ -59,21 +67,35 @@
             td_snum.innerHTML = s_no++
             todo_tb.appendChild(new_tr)
 
-            td_task.innerHTML = task
-            td_des.innerHTML = description
+            td_task.innerHTML = task.value
+            td_des.innerHTML = description.value
             td_date.innerHTML = current_date
             td_status.innerHTML = 'PENDING'
             td_status.style.color = 'red'
             td_action.innerHTML = '<button class="btn btn-outline-primary" onclick="delete_task()">complete</button>'
+
+            task.value = ''
+            description.value = ''
+
+            
         }
 
+
+
+           
+            
+        }
         function delete_task(){
             var selected_rowid = event.target.parentNode.parentNode.id // selecting ancestor id of button clicked (tr)
             // document.getElementById('todo_tb').removeChild(selected_row) 
             var selected_row = document.getElementById(selected_rowid)
             selected_row.style.textDecoration = 'line-through'
-            
-        }
+
+            var children = selected_row.childNodes
+            children[4].innerHTML = 'COMPLETED'
+            children[4].style.color = 'green'
+
+            }
         
     </script>
 

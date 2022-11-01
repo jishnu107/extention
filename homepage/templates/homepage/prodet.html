@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Product name</label>
+        <input type="text" class="form-control w-25" id="pname">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Product description</label>
+        <textarea class="form-control w-25" id="pdescription" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">product Price</label>
+        <input type="text" class="form-control w-25" id="pprice">
+    </div>
+    <button type="button" class="btn btn-primary btn-lg" onclick="addproduct()">Add product</button><br><BR>
+
+    <table class="table table-striped-columns w-50" id="pro_table">
+        <tr>
+            <th>so/no</th>
+            <th>product name</th>
+            <th>product description</th>
+            <th>product Price</th>
+            <th>action</th>
+        </tr>
+    </table>
+
+
+    <script>
+        sno = 1
+        rowno = 0
+        function addproduct() {
+            var proname = document.getElementById('pname').value
+            var prodescription = document.getElementById('pdescription').value
+            var proprice = document.getElementById('pprice').value
+
+            var protable = document.getElementById('pro_table')
+            var tbrow = document.createElement('tr')
+            rowno++
+            var rowid = 'row' + rowno
+            tbrow.setAttribute('id', rowid)
+
+            var tdsno = tbrow.appendChild(document.createElement('td'))
+            var tdproname = tbrow.appendChild(document.createElement('td'))
+            var tdprodes = tbrow.appendChild(document.createElement('td'))
+            var tdproprice = tbrow.appendChild(document.createElement('td'))
+            var tdproaction = tbrow.appendChild(document.createElement('td'))
+
+            tdsno.innerHTML = sno++
+            protable.appendChild(tbrow)
+
+            tdproname.innerHTML = proname
+            tdprodes.innerHTML = prodescription
+            tdproprice.innerHTML = proprice
+            tdproaction.innerHTML = '<button type="button" class="btn btn-outline-danger" onclick="prodelete()">DELETE</button>'
+        }
+
+        function prodelete() {
+            var selected_rowid = event.target.parentNode.parentNode.id
+            document.getElementById('protable').removeChild(selected_rowid)
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

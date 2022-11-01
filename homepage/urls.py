@@ -29,6 +29,8 @@ urlpatterns = [
     path('todo',views.todo_page,name='todo'),
     path('domnew',views.domnew_page,name='domnew'),
     path('domnew1',views.domnew1_page,name='domnew1'),
+    path('prodet',views.prodet_page,name='prodet'),
+
 
 
 
