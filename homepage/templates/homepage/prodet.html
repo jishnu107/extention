@@ -29,6 +29,7 @@
         <tr>
             <th>so/no</th>
             <th>product name</th>
+            
             <th>product description</th>
             <th>product Price</th>
             <th>action</th>
@@ -62,12 +63,13 @@
             tdproname.innerHTML = proname
             tdprodes.innerHTML = prodescription
             tdproprice.innerHTML = proprice
-            tdproaction.innerHTML = '<button type="button" class="btn btn-outline-danger" onclick="prodelete()">DELETE</button>'
+            tdproaction.innerHTML = '<button type="button" class="btn btn-outline-danger" onclick="pro_delete()">DELETE</button>'
         }
 
-        function prodelete() {
-            var selected_rowid = event.target.parentNode.parentNode.id
-            document.getElementById('protable').removeChild(selected_rowid)
+        function pro_delete() {
+            var selected_rowid = event.target.parentNode.parentNode
+            console.log(selected_rowid)
+            document.getElementById('pro_table').removeChild(selected_rowid)
 
 
 

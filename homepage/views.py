@@ -79,6 +79,19 @@ def domnew1_page(request):
     return render(request,'homepage/domnew1.html')
 def prodet_page(request):
     return render(request,'homepage/prodet.html')
+def jquery_page(request):
+    return render(request,'homepage/jquery.html')
+def queryadd_page(request):
+    return render(request,'homepage/queryadd.html')
+def query2_page(request):
+    return render(request,'homepage/query2.html')
+def travers_page(request):
+    return render(request,'homepage/travers.html')
+def queryval_page(request):
+    return render(request,'homepage/queryval.html')
+def jsclock_page(request):
+    return render(request,'homepage/jsclock.html')
+    
 
 
 

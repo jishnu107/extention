@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <style>
+            #p1{
+                height: 200px;
+                width: 200px;
+                background-color: brown;
+                position: absolute;
+                
+            }
+        </style>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <p id="p1">Lorem ipsum dolor sit amet.</p>
+    <script>
+        $(document).ready(function () {
+            // var p = $('#p1').html()
+            // console.log(p)
+
+            $('#btn').click(function(){
+                // $('#p1').hide(3000)
+                // $('#p1').show(3000)
+                // $('#p1').toggle(3000)
+
+                // $('#p1').fadeIn(3000)
+                // $('#p1').fadeOut(3000)
+                // $('#p1').fadeToggle(3000)
+                // $('#p1').fadeTo(3000,0.5)
+                
+                // $('#p1').slideUp(3000)
+                // $('#p1').slideDown(3000)
+                // $('#p1').slideToggle(3000)
+
+                $('#p1').animate({
+                    // 'height':'100px'
+                    'left':'500px'
+
+                },2000).delay(3000)
+                .animate({
+                    'top':'400px'
+                },2000).delay(3000)
+                .animate({
+                    'left':'0px'
+
+                },2000).delay(3000)
+                .animate({
+                    'top' : '0px'
+                })
+
+
+
+
+
+
+
+
+
+            })
+
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

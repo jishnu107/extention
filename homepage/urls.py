@@ -30,6 +30,18 @@ urlpatterns = [
     path('domnew',views.domnew_page,name='domnew'),
     path('domnew1',views.domnew1_page,name='domnew1'),
     path('prodet',views.prodet_page,name='prodet'),
+    path('jquery',views.jquery_page,name='jquery'),
+    path('queryadd',views.queryadd_page,name='queryadd'),
+    path('query2',views.query2_page,name='query2'),
+    path('travers',views.travers_page,name='travers'),
+    path('queryval',views.queryval_page,name='queryval'),
+    path('jsclock',views.jsclock_page,name='jsclock'),
+
+
+
+
+
+
 
 
 

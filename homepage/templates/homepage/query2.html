@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <style>
+        .ul{
+            color: brown;
+
+        }
+        #d1{
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            border: 1px solid red;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="btn"> click</button>
+    <div id="d1">
+       
+
+    </div>
+    <ul>
+        <li>sdjf</li>
+        <li>sdfs</li>
+        <li>sdffsd</li>
+    </ul>
+
+
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                // $("#d1").remove()
+                //  $("#ul").empty()
+                //  $('ul').addClass('ul')
+                
+                var height=$('#d1').height()
+                console.log(height)
+                var width=$('#d1').width()
+                console.log(width)
+                var innerHeight=$('#d1').innerHeight()
+                console.log(innerHeight)
+                var innerWidth=$('#d1').innerWidth()
+                console.log(innerWidth)
+
+
+
+                
+                var outerwidth=$('#div1').outerWidth()
+                console.log(outerwidth)
+
+
+
+            })
+
+        })
+    </script>
+    
+</body>
+</html>

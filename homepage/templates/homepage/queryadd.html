@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    number1<input type="text" id="num1"><br>
+    number2<input type="text" id="num2"><br>
+    <button id="add">add</button><br>
+    <span id="res"></span>
+
+    <script>
+        $(document).ready(function(){
+            $('#add').click(function(){
+                var no1=Number($('#num1').val())
+                var no2=Number($('#num2').val())
+
+                var res=no1+no2
+                $('#res').html(res)
+                $('#res').css({
+                    'color': 'red','background-color':'blue'
+                })
+                $('#res').fadeToggle(3000)
+
+                
+
+            })
+            
+
+        })
+    </script>
+
+    
+</body>
+</html>
